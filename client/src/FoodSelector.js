@@ -7,18 +7,12 @@ import Form from "react-bootstrap/Form";
 
 import ImpactGauge from "./ImpactGauge";
 
-const FoodSelector = ({ foodOptions, selectedFood, setSelectedFood }) => {
+const FoodSelector = ({ foodOptions, selectedFoodItem, setSelectedFood }) => {
   const foodSelectOptions = () => {
     return foodOptions.map(food => {
       return <option value={food.id}>{food.name}</option>;
     });
   };
-
-  const selectedFoodArray = foodOptions.filter(
-    food => selectedFood !== null && food.id === parseInt(selectedFood)
-  );
-  const selectedFoodItem =
-    selectedFoodArray.length > 0 ? selectedFoodArray[0] : null;
 
   return (
     <>
@@ -29,7 +23,7 @@ const FoodSelector = ({ foodOptions, selectedFood, setSelectedFood }) => {
             <Form.Control
               as="select"
               placeholder="Choose your meal..."
-              value={selectedFood !== null ? selectedFood : ""}
+              value={selectedFoodItem !== null ? selectedFoodItem.id : ""}
               onChange={event => setSelectedFood(event.target.value)}
               style={{ marginBottom: "8px" }}
             >
@@ -39,7 +33,7 @@ const FoodSelector = ({ foodOptions, selectedFood, setSelectedFood }) => {
           </Form>
         </Col>
         <Col sm="2" className="text-center">
-          {selectedFood !== null ? (
+          {selectedFoodItem !== null ? (
             <ImpactGauge
               chartDivId="environment-gauge"
               value={
@@ -49,7 +43,7 @@ const FoodSelector = ({ foodOptions, selectedFood, setSelectedFood }) => {
           ) : null}
         </Col>
         <Col sm="2" className="text-center">
-          {selectedFood !== null ? (
+          {selectedFoodItem !== null ? (
             <ImpactGauge
               chartDivId="welfare-gauge"
               value={selectedFoodItem ? selectedFoodItem.animalWelfare : null}
@@ -57,7 +51,7 @@ const FoodSelector = ({ foodOptions, selectedFood, setSelectedFood }) => {
           ) : null}
         </Col>
         <Col sm="2" className="text-center">
-          {selectedFood !== null ? (
+          {selectedFoodItem !== null ? (
             <ImpactGauge
               chartDivId="cost-gauge"
               value={selectedFoodItem ? selectedFoodItem.cost : null}

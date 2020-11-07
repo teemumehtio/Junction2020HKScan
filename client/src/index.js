@@ -25,13 +25,18 @@ const App = () => {
             <img
               alt="HKScan"
               src="/logo192.png"
-              className="d-inline-block align-top"
-              style={{ marginRight: "15px" }}
+              className="d-inline-block align-middle"
+              style={{ marginRight: "35px" }}
             />
-            Let's eat ethical!
+            <img
+              alt="Let's Eat Ethical!"
+              src="/eat-ethical.png"
+              className="d-inline-block align-middle"
+              style={{ marginRight: "35px" }}
+            />
           </Navbar.Brand>
           <Nav className="mr-auto">
-            <NavLink to="/plan">Plan your eating</NavLink>
+            <NavLink to="/plan">Plan your meal</NavLink>
             <NavLink to="/history">History</NavLink>
             <NavLink to="/friends">Friends</NavLink>
           </Nav>

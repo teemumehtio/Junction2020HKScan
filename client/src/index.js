@@ -11,8 +11,9 @@ import {
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+import EatingPlan from "./EatingPlan";
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
 const App = () => {
@@ -25,19 +26,23 @@ const App = () => {
               alt="HKScan"
               src="/logo192.png"
               className="d-inline-block align-top"
+              style={{ marginRight: "15px" }}
             />
+            Let's eat ethical!
           </Navbar.Brand>
           <Nav className="mr-auto">
-            <NavLink to="/this-week">This week</NavLink>
+            <NavLink to="/plan">Plan your eating</NavLink>
             <NavLink to="/history">History</NavLink>
             <NavLink to="/friends">Friends</NavLink>
           </Nav>
         </Navbar>
         <Switch>
-          <Route path="/this-week">THIS WEEK</Route>
+          <Route path="/plan">
+            <EatingPlan />
+          </Route>
           <Route path="/history">HISTORY</Route>
           <Route path="/friends">FRIENDS</Route>
-          <Redirect to="/this-week" />
+          <Redirect to="/plan" />
         </Switch>
       </Router>
     </>

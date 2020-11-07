@@ -76,7 +76,14 @@ class ImpactGauge extends Component {
 
   componentDidUpdate(oldProps) {
     if (this.chart) {
-      this.chart.data = this.props.data;
+      this.chart.dispose();
+    }
+    this.createChart();
+  }
+
+  componentWillUnmount() {
+    if (this.chart) {
+      this.chart.dispose();
     }
   }
 

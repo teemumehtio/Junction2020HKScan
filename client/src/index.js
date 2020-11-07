@@ -13,6 +13,8 @@ import Nav from "react-bootstrap/Nav";
 
 import EatingPlan from "./EatingPlan";
 
+import Friends from "./Friends";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
@@ -46,7 +48,9 @@ const App = () => {
             <EatingPlan />
           </Route>
           <Route path="/history">HISTORY</Route>
-          <Route path="/friends">FRIENDS</Route>
+          <Route path="/friends">
+            <Friends />
+          </Route>
           <Redirect to="/plan" />
         </Switch>
       </Router>

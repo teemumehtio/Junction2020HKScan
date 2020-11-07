@@ -85,8 +85,8 @@ class ImpactGauge extends Component {
       <div
         id={this.props.chartDivId}
         style={{
-          width: "100%",
-          height: "150px"
+          width: this.props.width ? this.props.width : "100%",
+          height: this.props.height ? this.props.height : "150px"
         }}
       ></div>
     );

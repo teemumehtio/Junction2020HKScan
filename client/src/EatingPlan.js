@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import FoodSelector from "./FoodSelector";
-import FoodIngredients from "./FoodIngredients";
+import FoodAlternatives from "./FoodAlternatives";
 
 import FoodOptions from "./FoodOptions";
 
@@ -38,7 +38,30 @@ const EatingPlan = () => {
           selectedFoodItem={selectedFoodItem}
           setSelectedFood={setSelectedFood}
         />
-        <FoodIngredients selectedFoodItem={selectedFoodItem} />
+        {selectedFoodItem !== null ? (
+          <>
+            <FoodAlternatives
+              selectedFoodItem={selectedFoodItem}
+              alternatives={
+                selectedFoodItem !== null
+                  ? selectedFoodItem.ingredientOptions
+                  : null
+              }
+              title="Compare the different options making the food"
+              chartIdPrefix="ing"
+            />
+            <FoodAlternatives
+              selectedFoodItem={selectedFoodItem}
+              alternatives={
+                selectedFoodItem !== null
+                  ? selectedFoodItem.alternativeFoods
+                  : null
+              }
+              title="You might want to try also these foods"
+              chartIdPrefix="alt"
+            />
+          </>
+        ) : null}
       </Container>
     </>
   );

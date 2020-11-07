@@ -49,6 +49,7 @@ const EatingPlan = () => {
               }
               title="Compare the different options making the food"
               chartIdPrefix="ing"
+              enableInfo={true}
             />
             <FoodAlternatives
               selectedFoodItem={selectedFoodItem}

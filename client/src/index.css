@@ -11,3 +11,10 @@
   text-decoration: none;
   color: #152b62;
 }
+
+i.material-icons-outlined {
+  margin-left: 8px;
+  font-size: 20px;
+  color: #152b62;
+  cursor: pointer;
+}

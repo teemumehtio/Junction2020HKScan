@@ -48,7 +48,7 @@ const FoodOptions = [
         cost: 50
       },
       {
-        name: "Kariniemi Chicken Shred",
+        name: "Kariniemi Chicken",
         environmentalImpact: 70,
         animalWelfare: 75,
         cost: 60

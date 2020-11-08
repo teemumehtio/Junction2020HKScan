@@ -8,12 +8,12 @@ import HistoryChart from "./HistoryChart";
 
 const History = () => {
   const historyData = [
-    { week: 39, environmentalImpact: 50, animalWelfare: 70, cost: 70 },
+    { week: 39, environmentalImpact: 20, animalWelfare: 30, cost: 70 },
     { week: 40, environmentalImpact: 40, animalWelfare: 50, cost: 30 },
-    { week: 41, environmentalImpact: 75, animalWelfare: 90, cost: 40 },
-    { week: 42, environmentalImpact: 90, animalWelfare: 95, cost: 75 },
+    { week: 41, environmentalImpact: 60, animalWelfare: 60, cost: 40 },
+    { week: 42, environmentalImpact: 60, animalWelfare: 80, cost: 75 },
     { week: 43, environmentalImpact: 40, animalWelfare: 20, cost: 90 },
-    { week: 44, environmentalImpact: 85, animalWelfare: 50, cost: 65 }
+    { week: 44, environmentalImpact: 85, animalWelfare: 80, cost: 65 }
   ];
 
   return (

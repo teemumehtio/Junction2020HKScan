@@ -12,7 +12,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 import EatingPlan from "./EatingPlan";
-
+import History from "./History";
 import Friends from "./Friends";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -47,7 +47,9 @@ const App = () => {
           <Route path="/plan">
             <EatingPlan />
           </Route>
-          <Route path="/history">HISTORY</Route>
+          <Route path="/history">
+            <History />
+          </Route>
           <Route path="/friends">
             <Friends />
           </Route>
